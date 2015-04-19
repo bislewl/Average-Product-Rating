@@ -1,14 +1,13 @@
 <?php
 /**
  * @package languageDefines
- * @copyright Copyright 2003-2006 Zen Cart Development Team
+ * @copyright Copyright 2003-2007 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version $Id: product_info.php 3159 2006-03-11 01:35:04Z drbyte $
+ * @version $Id: product_info.php 6371 2007-05-25 19:55:59Z ajeh $
  *
- * Modified by Pavel Palek (2P) aka Dedek (zencart@palek.net) - 2007-03-19 - Average Product Rating
+ * MOD - Average Product Rating
  */
-
 define('TEXT_PRODUCT_NOT_FOUND', 'Sorry, the product was not found.');
 define('TEXT_CURRENT_REVIEWS', 'Current Reviews:');
 define('TEXT_MORE_INFORMATION', 'For more information, please visit this product\'s <a href="%s" target="_blank">webpage</a>.');
@@ -41,6 +40,11 @@ define('TEXT_ONETIME_CHARGE_SYMBOL', ' *');
 define('TEXT_ONETIME_CHARGE_DESCRIPTION', ' One time charges may apply');
 define('TEXT_ATTRIBUTES_QTY_PRICE_HELP_LINK','Quantity Discounts Available');
 define('ATTRIBUTES_QTY_PRICE_SYMBOL', zen_image(DIR_WS_TEMPLATE_ICONS . 'icon_status_green.gif', TEXT_ATTRIBUTES_QTY_PRICE_HELP_LINK, 10, 10) . '&nbsp;');
-
 define('TEXT_CURRENT_REVIEWS_RATING', 'Average Rating:'); // 2P added - Average Product Rating
+
+define('ATTRIBUTES_PRICE_DELIMITER_PREFIX', ' ( ');
+define('ATTRIBUTES_PRICE_DELIMITER_SUFFIX', ' )');
+define('ATTRIBUTES_WEIGHT_DELIMITER_PREFIX', ' (');
+define('ATTRIBUTES_WEIGHT_DELIMITER_SUFFIX', ') ');
+
 ?>

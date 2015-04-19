@@ -1,46 +1,50 @@
 <?php
 /**
  * @package languageDefines
- * @copyright Copyright 2003-2005 Zen Cart Development Team
+ * @copyright Copyright 2003-2007 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version $Id: document_general_info.php 2842 2006-01-13 06:21:11Z drbyte $
+ * @version $Id: document_general_info.php 6371 2007-05-25 19:55:59Z ajeh $
  *
- * Modified by Pavel Palek (2P) aka Dedek (zencart@palek.net) - 2007-03-19 - Average Product Rating
+ * MOD - Average Product Rating
  */
-
-define('TEXT_PRODUCT_NOT_FOUND', 'Omlouváme se, ale žádné zboží nebylo nalezeno.');
-define('TEXT_CURRENT_REVIEWS', 'Poèet hodnocení:');
-define('TEXT_MORE_INFORMATION', 'Pro více informací o zboží navštivte <a href="%s" target="_blank">domovskou stránku</a>.');
-define('TEXT_DATE_ADDED', 'Toto zboží bylo pøidáno do katalogu dne %s.');
-define('TEXT_DATE_AVAILABLE', 'Toto zboží bude skladem dne %s.');
-define('TEXT_ALSO_PURCHASED_PRODUCTS', 'Zákazníci, kteøí koupili toto zboží, objednali také...');
-define('TEXT_PRODUCT_OPTIONS', '<strong>Prosím vyberte:</strong>');
-define('TEXT_PRODUCT_MANUFACTURER', 'Výrobce: ');
-define('TEXT_PRODUCT_WEIGHT', 'Pøepravní váha: ');
-define('TEXT_PRODUCT_QUANTITY', ' Balení skladem');
-define('TEXT_PRODUCT_MODEL', 'Kód: ');
+define('TEXT_PRODUCT_NOT_FOUND', 'Sorry, the product was not found.');
+define('TEXT_CURRENT_REVIEWS', 'Current Reviews:');
+define('TEXT_MORE_INFORMATION', 'For more information, please visit this product\'s <a href="%s" target="_blank">webpage</a>.');
+define('TEXT_DATE_ADDED', 'This product was added to our catalog on %s.');
+define('TEXT_DATE_AVAILABLE', 'This product will be in stock on %s.');
+define('TEXT_ALSO_PURCHASED_PRODUCTS', 'Customers who bought this product also purchased...');
+define('TEXT_PRODUCT_OPTIONS', 'Please Choose: ');
+define('TEXT_PRODUCT_MANUFACTURER', 'Manufactured by: ');
+define('TEXT_PRODUCT_WEIGHT', 'Shipping Weight: ');
+define('TEXT_PRODUCT_QUANTITY', ' Units in Stock');
+define('TEXT_PRODUCT_MODEL', 'Model: ');
 
 
 
 // previous next product
-define('PREV_NEXT_PRODUCT', 'Zboží ');
-define('PREV_NEXT_FROM', ' od ');
-define('IMAGE_BUTTON_PREVIOUS','Pøedchozí položka');
-define('IMAGE_BUTTON_NEXT','Další položka');
-define('IMAGE_BUTTON_RETURN_TO_PRODUCT_LIST','Zpìt na seznam zboží');
+define('PREV_NEXT_PRODUCT', 'Product ');
+define('PREV_NEXT_FROM', ' from ');
+define('IMAGE_BUTTON_PREVIOUS','Previous Item');
+define('IMAGE_BUTTON_NEXT','Next Item');
+define('IMAGE_BUTTON_RETURN_TO_PRODUCT_LIST','Back to Product List');
 
 // missing products
-//define('TABLE_HEADING_NEW_PRODUCTS', 'Nové zboží pro %s');
+//define('TABLE_HEADING_NEW_PRODUCTS', 'New Products For %s');
 //define('TABLE_HEADING_UPCOMING_PRODUCTS', 'Upcoming Products');
 //define('TABLE_HEADING_DATE_EXPECTED', 'Date Expected');
 
-define('TEXT_ATTRIBUTES_PRICE_WAS',' [byla: ');
-define('TEXT_ATTRIBUTE_IS_FREE',' nyní je: Zdarma]');
+define('TEXT_ATTRIBUTES_PRICE_WAS',' [was: ');
+define('TEXT_ATTRIBUTE_IS_FREE',' now is: Free]');
 define('TEXT_ONETIME_CHARGE_SYMBOL', ' *');
-define('TEXT_ONETIME_CHARGE_DESCRIPTION', ' Jednorázové poplatky lze použít');
-define('TEXT_ATTRIBUTES_QTY_PRICE_HELP_LINK','Množstevní slevy dostupné');
+define('TEXT_ONETIME_CHARGE_DESCRIPTION', ' One time charges may apply');
+define('TEXT_ATTRIBUTES_QTY_PRICE_HELP_LINK','Quantity Discounts Available');
 define('ATTRIBUTES_QTY_PRICE_SYMBOL', zen_image(DIR_WS_TEMPLATE_ICONS . 'icon_status_green.gif', TEXT_ATTRIBUTES_QTY_PRICE_HELP_LINK, 10, 10) . '&nbsp;');
-
 define('TEXT_CURRENT_REVIEWS_RATING', 'Prùmìrné hodnocení:'); // 2P added - Average Product Rating
+
+define('ATTRIBUTES_PRICE_DELIMITER_PREFIX', ' ( ');
+define('ATTRIBUTES_PRICE_DELIMITER_SUFFIX', ' )');
+define('ATTRIBUTES_WEIGHT_DELIMITER_PREFIX', ' (');
+define('ATTRIBUTES_WEIGHT_DELIMITER_SUFFIX', ') ');
+
 ?>
