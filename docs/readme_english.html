@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>Average Product Rating v2.5</title>
+        <style type="text/css" media="all">
+            <!--
+            body { font-family: Verdana, Arial, Helvetica, sans-serif; text-size: small; } 
+            -->
+        </style>
+    </head>
+    <body>
+        <div align="center"><font size="4"><strong>Average Product Rating v2.5.0</strong></font></div>
+        <br /><br />
+        Author: Pavel Palek (2P) aka Dedek (zencart@palek.net)<br />
+        Version: 2.5.0 - Updated by bislewl 8/27/2015<br />
+        Zen Cart version: 1.5.4<br />
+        Languages included: Czech, English
+        <br /><br />
+        <font size="4"><strong><u>License</u></strong></font>
+        <p>This contribution is distributed under the terms of the Gnu General Public License (GPL) Version 2. A copy of this license can be found in LICENSE.txt as part of this contribution.</p>
+        <br />
+        <font size="4"><strong><u>Purpose &amp; Aim</u></strong></font>
+        <p>This mod adds an average rating line to the product info page. Average rating is taken from reviews for current product ID and current language and is displayed as number rounded to 2 decimal digits and the "stars" image just after Current Reviews line. New "half-star" images was added to display average ratings with 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5 and 5 stars. See real screenshots in the /screenshots/ folder of this contribution.</p>
+        <br /><br />
+        <font size="4"><strong><u>Files List</u></strong></font><br />
+        <p>Some of the files in the this addon are new files, some are Zen Cart Core files, and some are template files. No changes are made to the database.</p>
+        <p><strong>New Files Added</strong></p>
+        <ul>
+            <li>/includes/templates/template_default/images/stars_1_5.gif</li>  
+            <li>/includes/templates/template_default/images/stars_2_5.gif</li>
+            <li>/includes/templates/template_default/images/stars_3_5.gif</li>
+            <li>/includes/templates/template_default/images/stars_4_5.gif</li> 
+            <li>/includes/functions/extra_functions/average_product_reviews.php</li>
+            <li>/includes/languages/czech/extra_definitions/average_product_reviews.php</li>
+            <li>/includes/languages/english/extra_definitions/average_product_reviews.php</li>
+        </ul> 
+
+        <br /><br />
+        <font size="4"><strong><u>Installation Instructions</u></strong></font>    
+        <ol>
+            <li><strong>BACK UP YOUR STORE FILES AND DATABASE BEFORE GETTING STARTED!!</strong></li>
+            <li>Rename YOUR_ADMIN to be the name of your admin</li>
+            <li>Upload the files keeping the directory structure</li>
+            <li>Load Your Admin, the module will self install</li>
+            <li>Modify your product_info/document_info/etc pages with teh following change
+                <ul>
+                    <li>Find the statment that looks like this:
+                        if($flag_show_product_info_reviews_count == 1){ 
+                            ...BUNCH OF STUFF... 
+                            }
+                    </li>
+                    <li>Replace with:
+        if($flag_show_product_info_reviews_count == 1){
+            echo average_product_reviews_string((int)$_GET['products_id']);
+        }
+                    
+                    </li>
+                </ul>
+            </li>
+            
+        </ol>
+        <br /><br />
+        <font size="4"><strong><u>Uninstall Instructions</u></strong><br /></font>	
+        <ol>
+            <li><strong>BACK UP YOUR STORE FILES & DATABASE BEFORE UNINSTALLING!!</strong></li>
+            <li>Revert your file Changes</li>
+            <li>Remove the installation files from your server</li>
+            <li>Run the uninstall.sql in the admin Tools->SQL Patches</li>
+        </ol>
+        <br /><br /> 	
+        <font size="4"><strong><u>v2.5.0 Changelog</u></strong></font> 
+        <ul>
+            <li>Updated with Zen Cart v1.5.4</li>   
+            <li>Added Auto Installer</li>
+            <li>Added Structured/Schema data to reviews</li>
+            <li>Added support for UTF-8 and Font Awesome</li>
+            <li>Changed read me to change files versus replacing/merging the file</li>
+            <li>Removed all core overwrite, template overrides and language overwrites
+                <br/>
+                <p><strong>Overridable Files Modified</strong></p>
+                <ul>
+                    <li>/includes/languages/czech/YOUR_CUSTOM_TEMPLATE/document_general_info.php</li>
+                    <li>/includes/languages/czech/YOUR_CUSTOM_TEMPLATE/document_product_info.php</li>
+                    <li>/includes/languages/czech/YOUR_CUSTOM_TEMPLATE/product_free_shipping_info.php</li>
+                    <li>/includes/languages/czech/YOUR_CUSTOM_TEMPLATE/product_info.php</li>
+                    <li>/includes/languages/czech/YOUR_CUSTOM_TEMPLATE/product_music_info.php</li>
+                    <br />
+                    <li>/includes/languages/english/YOUR_CUSTOM_TEMPLATE/document_general_info.php</li>
+                    <li>/includes/languages/english/YOUR_CUSTOM_TEMPLATE/document_product_info.php</li>
+                    <li>/includes/languages/english/YOUR_CUSTOM_TEMPLATE/product_free_shipping_info.php</li>
+                    <li>/includes/languages/english/YOUR_CUSTOM_TEMPLATE/product_info.php</li>
+                    <li>/includes/languages/english/YOUR_CUSTOM_TEMPLATE/product_music_info.php</li>
+                </ul>
+                <p><strong>Core Files Modified</strong></p>
+                <ul> 
+                    <li>/includes/modules/pages/document_general_info/main_template_vars.php</li>
+                    <li>/includes/modules/pages/document_product_info/main_template_vars.php</li>
+                    <li>/includes/modules/pages/product_free_shipping_info/main_template_vars.php</li>
+                    <li>/includes/modules/pages/product_info/main_template_vars.php</li>
+                    <li>/includes/modules/pages/product_music_info/main_template_vars.php</li> 
+                </ul>
+                <p><strong>Template Files Modified</strong></p>
+                <ul>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_document_general_info_display.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_document_product_info_display.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_product_free_shipping_info_display.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_product_info_display.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_product_music_info_display.php</li>
+                </ul>    
+            </li>
+        </ul>
+
+        <font size="4"><strong><u>v2.3 Changelog</u></strong></font> 
+        <ul> 
+            <li>Updated the following files to make them compatible with Zen Cart v1.5.0
+                <ul>
+                    <li>/includes/modules/pages/document_general_info/main_template_vars.php</li>
+                    <li>/includes/modules/pages/document_product_info/main_template_vars.php</li>
+                    <li>/includes/modules/pages/product_free_shipping_info/main_template_vars.php</li>
+                    <li>/includes/modules/pages/product_info/main_template_vars.php</li>
+                    <li>/includes/modules/pages/product_music_info/main_template_vars.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_document_general_info_display.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_document_product_info_display.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_product_free_shipping_info_display.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_product_info_display.php</li>
+                    <li>/includes/templates/YOUR_CUSTOM_TEMPLATE/templates/tpl_product_music_info_display.php</li> 
+                </ul>
+            </li>
+            <li>Converted the English version README file from a text file to html and formatted for easier readability</li>
+            <li>Updated the English version README file</li>
+            <ul>		
+                <li>Clarified installation instructions</li>
+                <li>Added uninstall instructions</li>
+                <li>Removed extraneous information</li>
+            </ul>
+        </ul>
+        <br /><br /> 
+    </body>
+</html>
+
