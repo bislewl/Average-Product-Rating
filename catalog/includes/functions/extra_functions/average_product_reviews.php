@@ -14,7 +14,7 @@
 function average_product_reviews_string($products_id)
 {
     $count = average_product_reviews_count($products_id);
-    $count = average_product_reviews_average($products_id);
+    $average = average_product_reviews_average($products_id);
 
     switch (AVG_PRODUCT_REVIEWS_STARS_TYPE) {
         case 'Images':
